@@ -1,5 +1,6 @@
-#Triangle Count Graph Analytics
-*Insert Triangle Count image*
+# Triangle Count Graph Analytics
+
+* Insert Triangle Count archiecture *
 
 ## Introducing a Triangle Count Graph Analytics in CUDA & C++
 
@@ -18,10 +19,12 @@ In this project, I designed and implemented a fully
 ### Project reflection
 
 Key things I learned were
-- CUDA syntax
-- 
+- CUDA fundamentals
+- Graph algorithms
+- Memory tracking
 
-
+### Documentation that helped me
+- https://www.nvidia.com/en-us/glossary/graph-analytics/
 
 ### How it works
 
