@@ -1,6 +1,6 @@
 # Triangle Counting in CUDA & C++
 
-* Insert Triangle Count Architecture *
+![CUDA Graph Pipeline](assets/triangle_count_diagram.png)
 
 ## Introducing Triangle Counting for Graph Analytics in CUDA & C++
 
