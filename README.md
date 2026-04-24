@@ -25,7 +25,7 @@ I built this project because I wanted to understand what really goes into GPU-ac
 ---
 ### Helpful References
 
-- [https://www.nvidia.com/en-us/glossary/graph-analytics/
+- https://www.nvidia.com/en-us/glossary/graph-analytics/
 
 ---
 
