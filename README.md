@@ -1,4 +1,4 @@
-# Triangle Counting in CUDA & C++
+# Triangle Counting in CUDA & C++ 
 
 ![CUDA Graph Pipeline](assets/triangle_count.png)
 
@@ -85,6 +85,12 @@ nvcc -O3 -std=c++17 -lineinfo -g -Iinclude ^
 
 <img width="2311" height="579" alt="image" src="https://github.com/user-attachments/assets/75ae9d73-6908-4de0-9ac9-d1cd46af2514" />
 
+
+The initial profiling with Nsight Compute showed COmpute SOl at ~51% and Memory SOl at ~45%, indicating the kernel was neither compute-bound nor memory-bound but instread limited by latency and occupancy. Night's recommendations highlighted uncoalesced global loads, low L1/TEX hit rates, and warp divergence caused by irregular neighbor list lengths.
+
+Uncoalesced global loads: Occurs when threads in the same warp access global memory addresses that are far apart, forcing the GPU to issue multiple memory transactions instead of one. This reduces memory throughput and increases latency.
+Low L1/TEX hit rate: Most memory accesses miss the L1 cache and must be served from slower memory (L2 or DRAM). This happens when threads do not reuse nearby data or access memory irregularly.
+Warp divergence: Occurs when threads in the same warp take different control-flow paths (different branches or loop iterations). The warp must serialize these paths, reducing parallel efficiency.
 
 ---
 
